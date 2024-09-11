@@ -12,7 +12,7 @@ nordvpn set technology ${TECHNOLOGY:-NordLynx}
 
 # Configue local network and routing allow list
 if [[ -n ${MESHNET} ]]; then
-  allowedLocalHosts=${ALLOWROUTE}
+  allowedLocalHosts=${ALLOWLOCAL}
   if [[ -n ${allowedLocalHosts} ]]; then
     IFS=',' read -ra allowed <<< "$allowedLocalHosts"
     for host in "${allowed[@]}"; do
